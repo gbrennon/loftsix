@@ -12,7 +12,6 @@ bp = Blueprint('', __name__, url_prefix='')
 
 @bp.route('/')
 def index():
-<<<<<<< HEAD
     return render_template('home.html')
 
 
@@ -31,12 +30,11 @@ def match():
 @bp.route('/boostrap')
 def up_base():
     bootstrap()
-=======
     properties = get_all()
     print(properties)
     return render_template('home.html')
 
+
 @bp.route('/survey')
 def survey():
     return render_template('survey.html')
->>>>>>> 390d626a1027b149b3433a5b1ff6d008afa2a47e
