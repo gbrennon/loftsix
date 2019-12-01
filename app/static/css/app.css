@@ -14,16 +14,14 @@ html, body {
 }
 
 .loftsix-banner {
-    height: 100%;
-
     background-size: cover;
     color: white;
+    min-height: 350px;
+    padding: 30px 0;
 }
 
 .loftsix-banner.home {
     background-image: url(../images/banner-home.png);
-
-    min-height: 350px;
 }
 
 .loftsix-banner.survey, .loftsix-banner.survey-home {
@@ -81,6 +79,7 @@ html, body {
 
 .loftsix-banner .col-md {
     padding: 0 30px;
+    margin-bottom: 50px;
 }
 
 .loftsix-banner .col-md button {
@@ -130,6 +129,7 @@ html, body {
 
     .loftsix-banner {
         height: 350px;
+        padding: 0;
         display: flex;
     }
 
@@ -146,5 +146,6 @@ html, body {
     }
     .loftsix-banner .col-md {
         padding: 0 90px;
+        margin-bottom: 0;
     }
 }

@@ -4,26 +4,30 @@
 <div class="loftsix-banner survey">
     <div class="container">
         <div class="row">
-            <div class="title">
-                <h1>O apartamento do tamanho dos seus <span>sonhos</span></h1>
+            <div class="col">
+                <div class="title">
+                    <h1>O apartamento do tamanho dos seus <span>sonhos</span></h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="survey" data-questions="{{questions}}">
+<div class="survey">
     <div class="container">
         <div class="row">
-            <div class="welcome-msg">
-                <p>Olá, que bom que você veio! Comprar um apartamento é uma das decisões mais importantes da nossa vida. Por isso, escolher um imóvel que é a nossa cara é fundamental e estamos aqui para te ajudar. Vamos começar?</p>
-                <div class="chat-container">
-                    <ul class="chat-iteration list-unstyled">
-                    </ul>
-                    <div class="input-container">
-                        <form id="answer-form">
-                            <input id="chat-input" type="text" placeholder="Responda aqui..." required>
-                            <button type="submit">></button>
-                        </form>
+            <div class="col">
+                <div class="welcome-msg">
+                    <p>Olá, que bom que você veio! Comprar um apartamento é uma das decisões mais importantes da nossa vida. Por isso, escolher um imóvel que é a nossa cara é fundamental e estamos aqui para te ajudar. Vamos começar?</p>
+                    <div class="chat-container">
+                        <ul class="chat-iteration list-unstyled">
+                        </ul>
+                        <div class="input-container">
+                            <form id="answer-form">
+                                <input id="chat-input" type="text" placeholder="Responda aqui..." required>
+                                <button type="submit">></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,7 +37,7 @@
 
 <form action="{{url_for('.match')}}" id="survey-form">
     {% for question in survey %}
-        <input type="hidden" name="{{question.category}}">
+    <input type="hidden" name="{{question.category}}">
     {% endfor %}
 </form>
 
