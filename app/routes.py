@@ -1,11 +1,12 @@
 from flask import Blueprint, render_template
 
-from infrastructure.repository import property as Property
+from infrastructure.repository.property import get_all
 
 bp = Blueprint('', __name__, url_prefix='')
 
 
 @bp.route('/')
 def index():
-    properties = Property.get_all()
+    properties = get_all()
+    print(properties)
     return render_template('index.html')
