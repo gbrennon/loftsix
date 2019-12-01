@@ -1,8 +1,10 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, send_from_directory
 
 from infrastructure.repository.property import get_all
 from infrastructure.repository.fixtures import bootstrap
 from domain.property import Property
+
+from config import ASSETS_FOLDER
 
 bp = Blueprint('', __name__, url_prefix='')
 
