@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+{% for p in properties %}
+<p>{{ p.tower_name }}</p>
+{% endfor %}
+{% endblock %}
