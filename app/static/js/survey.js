@@ -11,7 +11,7 @@
 
     const persistAnswer = (answer) => {
         const lastLi = document.querySelector('.chat-iteration li:last-child');
-        const template = `<span>Resposta: ${answer}</span>`;
+        const template = `<p>${answer}</p>`;
 
         survey[currentQuestionIdx].answer = answer;
 

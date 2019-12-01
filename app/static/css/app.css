@@ -90,6 +90,10 @@ html, body {
     text-align: right;
 }
 
+.chat-container {
+    max-width: 400px;
+}
+
 .chat-container button {
     display: inline-block;
     border-radius: 50%;
@@ -104,6 +108,10 @@ html, body {
     border-top: none;
     border-left: none;
     border-right: none;
+}
+
+.chat-iteration p:nth-child(even) {
+    text-align: right;
 }
 
 .typewriter {
@@ -139,6 +147,7 @@ html, body {
 
     .survey {
         padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .loftsix-banner.home {
