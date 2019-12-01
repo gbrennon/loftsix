@@ -15,4 +15,9 @@ def index():
 
 @bp.route('/survey')
 def survey():
-    return render_template('survey.html')
+    questions = [
+        'Voce tem filhos?',
+        'Voce é estudante?',
+        'Qual sua idade?'
+    ];
+    return render_template('survey.html', questions=questions)

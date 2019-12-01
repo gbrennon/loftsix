@@ -1,10 +1,5 @@
 (function() {
-    const questions = [
-        'Como podemos te chamar?',
-        'Quanto é 1+1?',
-        'Quanto é 2+2?'
-    ]
-
+    let questions = [];
     const answers = [];
     let currentQuestionIdx = 0;
 
@@ -31,11 +26,23 @@
         persistAnswer(answer);
         input.value = '';
 
-        renderQuestion(questions[currentQuestionIdx]);
         currentQuestionIdx++;
+        renderQuestion(questions[currentQuestionIdx]);
+
+        if(answers.length == questions.length) {
+            return true;
+        }
 
         return false;
     }
+
+    const setupSurvey = (_questions) => {
+        questions = _questions;
+        console.log(questions);
+        renderQuestion(questions[currentQuestionIdx]);
+    };
+
+    window.setupSurvey = setupSurvey;
 
     const answerForm = document.getElementById('answer-form');
     answerForm.addEventListener('submit', answerQuestion);
