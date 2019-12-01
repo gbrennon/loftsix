@@ -2,7 +2,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-  }
+    font-family: 'Circular Std';
+}
 
 .navbar-brand {
     color: orange;
@@ -22,6 +23,11 @@ html, body {
 
 .loftsix-banner .title {
     width: 100%;
+}
+
+.loftsix-banner .title span {
+    font-family: 'Theory';
+    font-size: 100px;
 }
 
 .loftsix-banner .container {
@@ -51,10 +57,7 @@ html, body {
 
 .typewriter {
     overflow: hidden;
-    border-right: .15em solid orange;
     white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
     animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
 }
 

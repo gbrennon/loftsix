@@ -34,4 +34,22 @@ def up_base():
 
 @bp.route('/survey')
 def survey():
-    return render_template('survey.html')
+    survey = [
+        {
+            'category': 'rooms',
+            'question': 'Quantos quartos voce quer ter em sua casa?'
+        },
+        {
+            'category': 'value',
+            'question': 'Ate quantos reais voce pagaria num apartamento?'
+        },
+        {
+            'category': 'garages',
+            'question': 'Quantos carros voce tem?'
+        },
+        {
+            'category': 'area',
+            'question': 'Quantos m²?'
+        },
+    ];
+    return render_template('survey.html', survey=survey)
