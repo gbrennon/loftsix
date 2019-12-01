@@ -59,22 +59,7 @@ html, body {
     color: #7F8C8D;
 }
 
-.loftsix-banner button {
-    color: rgba(0, 0, 0, 0.87);
-    background: white;
-    text-transform: uppercase;
-    padding: 8px 22px;
-    font-size: 0.9375rem;
-    min-width: 64px;
-    box-sizing: border-box;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    font-weight: 600;
-    line-height: 1.5rem;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.loftsix-banner button a {
+.loftsix-banner a {
     color: rgba(0, 0, 0, 0.87);
 }
 
@@ -83,7 +68,7 @@ html, body {
     margin-bottom: 50px;
 }
 
-.loftsix-banner .col-md button {
+.loftsix-banner .col-md .btn {
     margin-top: 10px;
 }
 
@@ -94,6 +79,13 @@ html, body {
 .chat-container {
     max-width: 400px;
 }
+
+.btn-submit:hover {
+    color: #E75A23;
+    background: white;
+    border-color: #E75A23;
+}
+
 
 .chat-container button {
     display: inline-block;
