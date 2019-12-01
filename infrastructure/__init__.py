@@ -19,22 +19,13 @@ def migrate(app):
                             SQLALCHEMY_TRACK_MODIFICATIONS=False)
     import_models()
     db.init_app(app)
-    # location = Location(longitude=10, latitude=15,
-    #                    city='salvador', state='bahia', address='qlqr coisa')
-
-    query = text(
-        'insert into location (city, state, address, longitude, latitude) values ("salvador","bahia","qlqr","40","30")')
-    result = db.engine.execute(query)
-    print(result)
-    db.add(location)
-    db.commit()
-
     Migrate(app, db)
+    app.cli.add_command(init_db_command)
     return app
 
 
 def import_models():
-    for dir_path, dir_names, file_names in os.walk('infrastructure/mapper'):
+    for dir_path, _, file_names in os.walk('infrastructure/mapper'):
         for file_name in file_names:
             if file_name.endswith("py") and file_name not in '__init__.py':
                 print(file_name)
@@ -50,10 +41,3 @@ def init_db_command():
     import_models()
     db.create_all()
     click.echo("Initialized the database")
-
-
-@click.command("bootstrap")
-@with_appcontext
-def bootstrap_db_command():
-    bootstrap(db)
-    click.echo("Database bootstrapped")

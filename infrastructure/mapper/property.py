@@ -1,9 +1,6 @@
 from domain.property import Property as PropertyDomain
 from infrastructure import db
 
-#from infrastructure.mapper.location import Location
-
-
 class Property(db.Model, PropertyDomain):
     id = db.Column(db.Integer, primary_key=True)
     tower_name = db.Column(db.String(255), nullable=False)
