@@ -34,8 +34,9 @@ def up_base():
 
 @bp.route('/property/<id>')
 def info_property(id):
+    perc = request.args.get('perc')
     property = find(id)
-    return render_template('property.html', property=property)
+    return render_template('property.html', property=property, perc=perc)
 
 
 @bp.route('/survey')
