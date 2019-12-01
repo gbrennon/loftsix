@@ -4,8 +4,11 @@ import os
 from flask.cli import with_appcontext
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from sqlalchemy import text
 
 from config import DATABASE_URL
+#from infrastructure.bootstrap import bootstrap
+#from domain.location import Location
 
 db = SQLAlchemy()
 
@@ -16,7 +19,15 @@ def migrate(app):
                             SQLALCHEMY_TRACK_MODIFICATIONS=False)
     import_models()
     db.init_app(app)
-    app.cli.add_command(init_db_command)
+    # location = Location(longitude=10, latitude=15,
+    #                    city='salvador', state='bahia', address='qlqr coisa')
+
+    query = text(
+        'insert into location (city, state, address, longitude, latitude) values ("salvador","bahia","qlqr","40","30")')
+    result = db.engine.execute(query)
+    print(result)
+    db.add(location)
+    db.commit()
 
     Migrate(app, db)
     return app
@@ -37,6 +48,12 @@ def import_models():
 @with_appcontext
 def init_db_command():
     import_models()
-    db.drop_all()
     db.create_all()
     click.echo("Initialized the database")
+
+
+@click.command("bootstrap")
+@with_appcontext
+def bootstrap_db_command():
+    bootstrap(db)
+    click.echo("Database bootstrapped")
