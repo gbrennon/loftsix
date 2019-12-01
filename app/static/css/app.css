@@ -39,6 +39,10 @@ html, body {
     align-items: center;
 }
 
+.welcome-msg p, li span {
+    color: #7F8C8D;
+}
+
 .chat-container button {
     display: inline-block;
     border-radius: 50%;
