@@ -31,10 +31,16 @@
     </div>
 </div>
 
+<form action="" id="survey-form">
+    {% for question in survey %}
+        <input type="hidden" name="{{question.category}}">
+    {% endfor %}
+</form>
+
 <script type="text/javascript"
         src="{{ static_url_for('static', filename='js/survey.js') }}"></script>
 
 <script>
-    window.setupSurvey({{questions | safe}});
+    window.setupSurvey({{survey | safe}});
 </script>
 {% endblock %}

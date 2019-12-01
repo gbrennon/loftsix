@@ -1,6 +1,5 @@
 (function() {
-    let questions = [];
-    const answers = [];
+    let survey = [];
     let currentQuestionIdx = 0;
 
     const renderQuestion = (question) => {
@@ -13,7 +12,8 @@
     const persistAnswer = (answer) => {
         const lastLi = document.querySelector('.chat-iteration li:last-child');
         const template = `<p>${answer}</p>`;
-        answers.push(answer);
+
+        survey[currentQuestionIdx].answer = answer;
 
         return lastLi.innerHTML += template;
     }
@@ -29,11 +29,12 @@
         input.value = '';
 
         currentQuestionIdx++;
-        renderQuestion(questions[currentQuestionIdx]);
 
-        if(answers.length === questions.length) {
-            return true;
+        if(survey.length == currentQuestionIdx) {
+            return completeSurvey(survey);
         }
+
+        renderQuestion(survey[currentQuestionIdx].question);
 
         return false;
     }
@@ -42,10 +43,24 @@
         document.querySelector('.typewriter').classList.remove('typewriter');
     };
 
-    const setupSurvey = (_questions) => {
-        questions = _questions;
-        console.log(questions);
-        renderQuestion(questions[currentQuestionIdx]);
+    const setupSurvey = (_survey) => {
+        survey = _survey;
+        renderQuestion(survey[currentQuestionIdx].question);
+    };
+
+    const completeSurvey = (survey) => {
+        const surveyForm = document.querySelector('#survey-form');
+
+        survey.forEach((question) => {
+            const inputName = question.category;
+            const input = document.querySelector(`input[name=${inputName}]`);
+
+            input.value = question.answer;
+        });
+
+        setTimeout(() => {
+            surveyForm.submit();
+        }, 1000);
     };
 
     window.setupSurvey = setupSurvey;
