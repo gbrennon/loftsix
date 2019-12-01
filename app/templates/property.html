@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="cointaner">
+	<div class="col-sm">
+		<img width="33%" src="../static/images/apto1.png" alt="batroom">
+		<img width="33%" src="../static/images/apto2.png" alt="kitchen">
+		<img width="33.3%" src="../static/images/apto3.png" alt="living">
+	</div>
+</div>
+</div>
+<div class="cointaner">
+	<div class="col-sm">
+		<div style="height: 72px; background-color: #E75A23;width: 100%;padding: 10px; padding-left: 60px;color: white">
+			<div class="circle">90%</div>
+			<span style="font-size: 18px;">{{property.location[0].address}}</span><br>
+			<span style="font-size: 14px; padding-left: 15px; padding-right: 120px;">{{property.location[0].city}} -
+				{{property.location[0].state}}
+			</span>
+			<span><span style="font-size: 14px;">Preço da venda:</span> R$ {{property.minimum_estimate}}</span>
+		</div>
+	</div>
+</div>
+<div style="margin-top: 30px;" class="cointaner">
+	<div class="col-sm">
+		<h3 style="font-size: 16px;margin-left: 10%;">Caracteríticas do apartamento</h3>
+	</div>
+</div>
+<div class="cointaner">
+	<div class="col-sm">
+		<img style="margin-left: 20%;" src="../static/images/property_itens.png" alt="cardapto1">
+	</div>
+</div>
+<div style="margin-top: 30px;" class="cointaner">
+	<div class="col-sm">
+		<h3 style="font-size: 16px;padding-left: 40px;">Estes imóveis também atendem o seu perfil</h3>
+	</div>
+</div>
+<div class="cointaner">
+	<div class="col-sm">
+		<img width="33%" src="../static/images/card-apto-1.png" alt="cardapto1">
+		<img width="33%" src="../static/images/card-apto-2.png" alt="cardapto2">
+		<img width="33%" src="../static/images/card-apto-3.png" alt="cardapto3">
+	</div>
+</div>
+{% endblock %}

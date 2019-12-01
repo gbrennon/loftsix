@@ -104,6 +104,19 @@ html, body {
     width: 35px;
 }
 
+.circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: whitesmoke;
+    line-height: 48px;
+    text-align: center;
+    background: orange;
+    float: left;
+    margin-right: 10px;
+  }
+
 .chat-container input {
     border-top: none;
     border-left: none;
