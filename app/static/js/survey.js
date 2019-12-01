@@ -14,8 +14,8 @@
         const template = `<p>${answer}</p>`;
 
         survey[currentQuestionIdx].answer = answer;
-
-        return lastLi.innerHTML += template;
+        lastLi.innerHTML += template;
+		window.scrollTo(0, document.body.scrollHeight);
     }
 
     const answerQuestion = (event) => {

@@ -143,6 +143,10 @@ html, body {
     50% { border-color: orange; }
 }
 
+.survey {
+    padding: 30px 0;
+}
+
 @media(min-width: 1024px) {
     .nav-item {
         margin-left: 20px;
