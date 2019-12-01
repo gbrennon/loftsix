@@ -1,0 +1,82 @@
+.navbar-brand {
+    color: orange;
+}
+
+.navbar-toggler {
+    color: black;
+}
+
+.loftsix-banner {
+    height: 100%;
+
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    color: white;
+}
+
+.loftsix-banner .title {
+    width: 100%;
+}
+
+.loftsix-banner .container {
+    display: flex;
+}
+
+.loftsix-banner .row {
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container button {
+    display: inline-block;
+    border-radius: 50%;
+    background: #E75A23;
+    color: white;
+
+    height: 35px;
+    width: 35px;
+}
+
+.chat-container input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+@media(min-width: 1024px) {
+    .nav-item {
+        margin-left: 20px;
+    }
+
+    .loftsix-banner {
+        height: 350px;
+        display: flex;
+    }
+
+    .loftsix-banner .title {
+        width: 280px;
+    }
+
+    .survey {
+        padding-top: 50px;
+    }
+}
