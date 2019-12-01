@@ -3,7 +3,7 @@
     let currentQuestionIdx = 0;
 
     const renderQuestion = (question) => {
-        const template = `<li><span class="typewriter">${question}</span></li>`;
+        const template = `<li><p class="typewriter">${question}</p></li>`;
         const chatIteration = document.querySelector('.chat-iteration');
 
         return chatIteration.insertAdjacentHTML('beforeEnd', template);
@@ -11,7 +11,7 @@
 
     const persistAnswer = (answer) => {
         const lastLi = document.querySelector('.chat-iteration li:last-child');
-        const template = `<span>${answer}</span>`;
+        const template = `<span>Resposta: ${answer}</span>`;
 
         survey[currentQuestionIdx].answer = answer;
 

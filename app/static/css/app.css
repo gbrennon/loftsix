@@ -14,15 +14,30 @@ html, body {
 }
 
 .loftsix-banner {
-    height: 100%;
-
-    background-image: url(../images/banner.png);
     background-size: cover;
     color: white;
+    min-height: 350px;
+    padding: 30px 0;
+}
+
+.loftsix-banner.home {
+    background-image: url(../images/banner-home.png);
+}
+
+.loftsix-banner.survey, .loftsix-banner.survey-home {
+    background-image: url(../images/banner-survey.png);
+}
+
+.loftsix-banner.survey-home {
+    height: 450px;
 }
 
 .loftsix-banner .title {
     width: 100%;
+}
+
+.loftsix-banner h3 {
+    font-weight: bold;
 }
 
 .loftsix-banner .title span {
@@ -41,6 +56,38 @@ html, body {
 
 .welcome-msg p, li span {
     color: #7F8C8D;
+}
+
+.loftsix-banner button {
+    color: rgba(0, 0, 0, 0.87);
+    background: white;
+    text-transform: uppercase;
+    padding: 8px 22px;
+    font-size: 0.9375rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-weight: 600;
+    line-height: 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.loftsix-banner button a {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.loftsix-banner .col-md {
+    padding: 0 30px;
+    margin-bottom: 50px;
+}
+
+.loftsix-banner .col-md button {
+    margin-top: 10px;
+}
+
+.loftsix-banner .col-md:nth-child(2) {
+    text-align: right;
 }
 
 .chat-container button {
@@ -79,13 +126,13 @@ html, body {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from { width: 0 }
+    to { width: 100% }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
 }
 
 @media(min-width: 1024px) {
@@ -95,6 +142,7 @@ html, body {
 
     .loftsix-banner {
         height: 350px;
+        padding: 0;
         display: flex;
     }
 
@@ -104,5 +152,13 @@ html, body {
 
     .survey {
         padding-top: 50px;
+    }
+
+    .loftsix-banner.home {
+        height: 500px;
+    }
+    .loftsix-banner .col-md {
+        padding: 0 90px;
+        margin-bottom: 0;
     }
 }
