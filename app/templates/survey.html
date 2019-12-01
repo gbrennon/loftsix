@@ -18,13 +18,15 @@
         <div class="row">
             <div class="col">
                 <div class="welcome-msg">
-                    <p>Olá, que bom que você veio! Comprar um apartamento é uma das decisões mais importantes da nossa vida. Por isso, escolher um imóvel que é a nossa cara é fundamental e estamos aqui para te ajudar. Vamos começar?</p>
+                    <p>Olá, que bom que você veio! Comprar um apartamento é uma das decisões mais importantes da nossa
+                        vida. Por isso, escolher um imóvel que é a nossa cara é fundamental e estamos aqui para te
+                        ajudar. Vamos começar?</p>
                     <div class="chat-container">
                         <ul class="chat-iteration list-unstyled">
                         </ul>
                         <div class="input-container">
                             <form id="answer-form">
-                                <input id="chat-input" type="number" placeholder="Responda aqui..." required>
+                                <input id="chat-input" type="text" placeholder="Responda aqui..." required>
                                 <button class="btn btn-light btn-submit" type="submit">></button>
                             </form>
                         </div>
@@ -41,10 +43,9 @@
     {% endfor %}
 </form>
 
-<script type="text/javascript"
-        src="{{ static_url_for('static', filename='js/survey.js') }}"></script>
+<script type="text/javascript" src="{{ static_url_for('static', filename='js/survey.js') }}"></script>
 
 <script>
-    window.setupSurvey({{survey | safe}});
+    window.setupSurvey({{ survey | safe}});
 </script>
 {% endblock %}

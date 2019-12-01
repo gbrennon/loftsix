@@ -43,20 +43,24 @@ def info_property(id):
 def survey():
     survey = [
         {
+            'category': 'name',
+            'question': 'Como que eu posso te chamar?'
+        },
+        {
+            'category': 'timesearch',
+            'question': 'Quanto tempo você está procurando apartamento?'
+        },
+        {
             'category': 'rooms',
-            'question': 'Quantos quartos você deseja ter em sua casa?'
+            'question': 'Quantas pessoas vive com você?'
         },
         {
             'category': 'value',
-            'question': 'Até quantos reais você pagaria em um apartamento?'
-        },
-        {
-            'category': 'garages',
-            'question': 'Quantos carros você tem?'
+            'question': 'Quanto você está disposto a pagar por um novo apê?'
         },
         {
             'category': 'area',
-            'question': 'Quantos m²?'
+            'question': 'Qual a área m² você gostaria de ter?'
         },
     ]
     return render_template('survey.html', survey=survey)

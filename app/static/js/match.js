@@ -16,7 +16,7 @@ function initMap() {
 	}
 
 	function addMarker(location, map, id) {
-		let label = `${Math.floor(Math.random() * 50) + 50}%`;
+		let label = `${Math.floor(Math.random() * 50) + 50}`;
 		var image = {
 			url: '../static/images/float-generic.svg',
 			size: new google.maps.Size(72, 59),
