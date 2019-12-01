@@ -7,8 +7,6 @@ from flask_migrate import Migrate
 from sqlalchemy import text
 
 from config import DATABASE_URL
-#from infrastructure.bootstrap import bootstrap
-#from domain.location import Location
 
 db = SQLAlchemy()
 
