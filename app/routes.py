@@ -22,7 +22,6 @@ def match():
     garages = request.args.get('garages')
     area = request.args.get('area')
     properties = get_by(rooms, value, garages, area)
-    print(rooms, properties)
 
     return render_template('match.html', properties=properties)
 
@@ -30,8 +29,6 @@ def match():
 @bp.route('/boostrap')
 def up_base():
     bootstrap()
-    properties = get_all()
-    print(properties)
     return render_template('home.html')
 
 
