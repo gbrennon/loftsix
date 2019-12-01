@@ -21,11 +21,11 @@ html, body {
 }
 
 .loftsix-banner.home {
-    background-image: url(../images/banner-home.png);
+    background-image: url(https://loftsix.s3.sa-east-1.amazonaws.com/banner-home.png);
 }
 
 .loftsix-banner.survey, .loftsix-banner.survey-home {
-    background-image: url(../images/banner-survey.png);
+    background-image: url(https://loftsix.s3.sa-east-1.amazonaws.com/banner-survey.png);
 }
 
 .loftsix-banner.survey-home {
@@ -80,7 +80,27 @@ html, body {
 }
 
 .chat-container {
-    max-width: 400px;
+    max-width: 500px;
+    height: 300px;
+    padding: 10px;
+
+    margin: 0 auto;
+}
+
+.chat-container .chat-iteration {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    border: 1px solid #ced4da;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+}
+
+.chat-container p {
+    margin: 0;
 }
 
 .btn-submit:hover {
@@ -91,13 +111,8 @@ html, body {
 
 
 .chat-container button {
-    display: inline-block;
-    border-radius: 50%;
     background: #E75A23;
     color: white;
-
-    height: 35px;
-    width: 35px;
 }
 
 .circle {
@@ -113,10 +128,8 @@ html, body {
     margin-right: 10px;
   }
 
-.chat-container input {
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.chat-iteration p:nth-child(odd) {
+    background: rgba(219, 219, 219, 0.5);
 }
 
 .chat-iteration p:nth-child(even) {

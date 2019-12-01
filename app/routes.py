@@ -52,15 +52,15 @@ def survey():
         },
         {
             'category': 'rooms',
-            'question': 'Quantas pessoas vive com você?'
+            'question': 'Quantas pessoas vivem com você?'
         },
         {
             'category': 'value',
             'question': 'Quanto você está disposto a pagar por um novo apê?'
         },
         {
-            'category': 'area',
-            'question': 'Qual a área m² você gostaria de ter?'
+            'category': 'distance',
+            'question': 'Como você costuma se deslocar para o trabalho?'
         },
     ]
     return render_template('survey.html', survey=survey)
