@@ -16,6 +16,7 @@ function initMap() {
 	}
 
 	function addMarker(location, map, id) {
+		let label = `${Math.floor(Math.random() * 51) + 50}`;
 		var image = {
 			url: '../static/images/float-chave_v2.svg',
 			size: new google.maps.Size(72, 59),
@@ -25,14 +26,15 @@ function initMap() {
 		};
 		var marker = new google.maps.Marker({
 			position: location,
-			label: `${Math.floor(Math.random() * 51) + 50}%`,
+			label: label,
 			map: map,
 			animation: google.maps.Animation.DROP,
 			icon: image,
 			id: id,
+			perc: label
 		});
 		google.maps.event.addListener(marker, 'click', function () {
-			window.location.href = `/property/${marker.id}`;
+			window.location.href = `/property/${marker.id}?perc=${marker.perc}`;
 		});
 	}
 
