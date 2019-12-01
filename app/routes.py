@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-from infrastucture.repository import property as Property
+from infrastructure.repository import property as Property
 
 bp = Blueprint('', __name__, url_prefix='')
 

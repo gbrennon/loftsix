@@ -1,7 +1,7 @@
 from domain.property import Property as PropertyDomain
 from infrastructure import db
 
-from infrastucture.mapper.location import Location
+from infrastructure.mapper.location import Location
 
 
 class Property(db.Model, PropertyDomain):
@@ -13,4 +13,4 @@ class Property(db.Model, PropertyDomain):
     useful_area = db.Column(db.Integer, nullable=False)
     minimum_estimate = db.Column(db.Float, nullable=False)
     maximum_estimate = db.Column(db.Float, nullable=False)
-    location = db.Relationship(Location)
+    location = db.relationship(Location)

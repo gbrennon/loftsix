@@ -9,3 +9,4 @@ class Location(db.Column, LocationDomain):
     address = db.Column(db.String(255), nullable=False)
     latitude = db.Column(db.Float, nullable=False)
     longitude = db.Column(db.Float, nullable=False)
+    property_id = db.Column(db.Integer, db.ForeignKey('property.id'))
