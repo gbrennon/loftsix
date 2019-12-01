@@ -16,17 +16,21 @@ function initMap() {
 	}
 
 	function addMarker(location, map, id) {
-		let label = `${Math.floor(Math.random() * 51) + 50}`;
+		let label = `${Math.floor(Math.random() * 50) + 50}%`;
 		var image = {
-			url: '../static/images/float-chave_v2.svg',
+			url: '../static/images/float-generic.svg',
 			size: new google.maps.Size(72, 59),
 			origin: new google.maps.Point(0, 0),
-			labelOrigin: new google.maps.Point(-10, 0),
+			labelOrigin: new google.maps.Point(14, 14),
 			anchor: new google.maps.Point(0, 32)
 		};
 		var marker = new google.maps.Marker({
 			position: location,
-			label: label,
+			label: {
+				text: label,
+				color: '#E75A23',
+				fontSize: '10px'
+			},
 			map: map,
 			animation: google.maps.Animation.DROP,
 			icon: image,
