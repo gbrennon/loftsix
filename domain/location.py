@@ -1,5 +1,5 @@
 class Location:
-    def __init__(self, city, state, address, latitude, longitude):
+    def __init__(self, city, state, address, latitude=0, longitude=0):
         self.city = city
         self.state = state
         self.address = address

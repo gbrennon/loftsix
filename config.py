@@ -3,7 +3,7 @@ import os
 
 if bool(os.getenv('PROD', True)):
     DATABASE_URL = os.getenv(
-        'DATABASE_URL', 'postgres://postgres:postgres@localhost:5432/loftsix')
+        'DATABASE_URL', 'postgres://postgres:postgres@localhost:5433/loftsix')
 else:
     db = 'loftsix'
     port = os.getenv('DB_PORT', 5433)
