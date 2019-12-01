@@ -3,7 +3,7 @@
     let currentQuestionIdx = 0;
 
     const renderQuestion = (question) => {
-        const template = `<li><p class="typewriter">${question}</p></li>`;
+        const template = `<li><span class="typewriter">${question}</span></li>`;
         const chatIteration = document.querySelector('.chat-iteration');
 
         return chatIteration.insertAdjacentHTML('beforeEnd', template);
@@ -11,7 +11,7 @@
 
     const persistAnswer = (answer) => {
         const lastLi = document.querySelector('.chat-iteration li:last-child');
-        const template = `<p>${answer}</p>`;
+        const template = `<span>${answer}</span>`;
 
         survey[currentQuestionIdx].answer = answer;
 
@@ -66,5 +66,8 @@
     window.setupSurvey = setupSurvey;
 
     const answerForm = document.getElementById('answer-form');
+    if (null != answerForm && undefined != answerForm) {
+        answerForm.addEventListener('submit', answerQuestion);
+    }
     answerForm.addEventListener('submit', answerQuestion);
 })();
