@@ -9,15 +9,16 @@
     let currentQuestionIdx = 0;
 
     const renderQuestion = (question) => {
-        const template = `<li><p>${question}</p></li>`;
+        const template = `<li><p class="typewriter">${question}</p></li>`;
         const chatIteration = document.querySelector('.chat-iteration');
 
-        return chatIteration.innerHTML += template;
+        return chatIteration.insertAdjacentHTML('beforeEnd', template);
     }
 
     const persistAnswer = (answer) => {
         const lastLi = document.querySelector('.chat-iteration li:last-child');
         const template = `<p>${answer}</p>`;
+        answers.push(answer);
 
         return lastLi.innerHTML += template;
     }
@@ -26,7 +27,6 @@
         event.preventDefault();
         const input = document.getElementById('chat-input');
         const answer = input.value;
-        answers.push(answer);
 
         persistAnswer(answer);
         input.value = '';
