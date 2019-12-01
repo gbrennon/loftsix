@@ -17,8 +17,8 @@ function initMap() {
 
 	function addMarker(location, map, id) {
 		var image = {
-			url: '../static/images/favicon.ico',
-			size: new google.maps.Size(32, 32),
+			url: '../static/images/float-chave.svg',
+			size: new google.maps.Size(72, 59),
 			origin: new google.maps.Point(0, 0),
 			labelOrigin: new google.maps.Point(-10, 0),
 			anchor: new google.maps.Point(0, 32)
