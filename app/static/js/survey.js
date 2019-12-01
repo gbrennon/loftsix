@@ -58,9 +58,7 @@
             input.value = question.answer;
         });
 
-        setTimeout(() => {
-            surveyForm.submit();
-        }, 1000);
+		surveyForm.submit();
     };
 
     window.setupSurvey = setupSurvey;
