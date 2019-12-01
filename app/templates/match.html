@@ -3,6 +3,7 @@
 {% block body %}
 {% for p in properties %}
 <input type="hidden" value="{{p.location[0].latitude}},{{p.location[0].longitude}}" name="loc">
+<input type="hidden" name="id" value={{p.id}}>
 {% endfor %}
 <div class="container">
 	<div class="row">
@@ -16,48 +17,12 @@
 			<img src="../static/images/pioneiro.png" alt="pioneiro" class="center">
 		</div>
 		<div class="col-sm">
-			<div style="height: 100%;" id="map"></div>
+			<div style="height: 100%; min-height: 400px;" id="map"></div>
 		</div>
 	</div>
 </div>
-<script>
-	function initMap() {
 
-		function initialize() {
-			let perce = ["90%", "80%", "60%"];
-			let locInitInput = document.getElementsByName('loc')[0].value.split(',');
-			var locInit = { lat: parseFloat(locInitInput[0]), lng: parseFloat(locInitInput[1]) };
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 15,
-				center: locInit
-			});
-			document.getElementsByName('loc').forEach((l, i) => {
-				let locInput = l.value.split(',');
-				var loc = { lat: parseFloat(locInput[0]), lng: parseFloat(locInput[1]) };
-				addMarker(loc, map, perce[i]);
-
-			});
-		}
-
-		function addMarker(location, map, label) {
-			var image = {
-				url: '../static/images/favicon.ico',
-				size: new google.maps.Size(32, 32),
-				origin: new google.maps.Point(0, 0),
-				labelOrigin: new google.maps.Point(-10, 0),
-				anchor: new google.maps.Point(0, 32)
-			};
-			var marker = new google.maps.Marker({
-				position: location,
-				label: label,
-				map: map,
-				icon: image
-			});
-		}
-
-		google.maps.event.addDomListener(window, 'load', initialize);
-	}
-</script>
+<script type="text/javascript" src="{{ static_url_for('static', filename='js/match.js') }}"></script>
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP9wjp3IzpVwrM0bpSFUvz6hOq7k5QjZU&callback=initMap"></script>
 {% endblock %}
