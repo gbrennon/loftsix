@@ -10,6 +10,7 @@
     height: 100%;
 
     background-image: url(../images/banner.png);
+    background-size: cover;
     color: white;
 }
 
@@ -26,7 +27,7 @@
     align-items: center;
 }
 
-.chat-iteration button {
+.chat-container button {
     display: inline-block;
     border-radius: 50%;
     background: #E75A23;
@@ -36,7 +37,7 @@
     width: 35px;
 }
 
-.chat-iteration input {
+.chat-container input {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -66,12 +67,8 @@
         margin-left: 20px;
     }
 
-    .nav-item::after {
-
-    }
-
     .loftsix-banner {
-        height: 450px;
+        height: 350px;
         display: flex;
     }
 
