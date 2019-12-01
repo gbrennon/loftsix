@@ -26,11 +26,14 @@ html, body {
 
 .loftsix-banner.survey, .loftsix-banner.survey-home {
     background-image: url(../images/banner-survey.png);
-	padding: 0 90px;
 }
 
 .loftsix-banner.survey-home {
     height: 450px;
+}
+
+.loftsix-banner .col {
+    padding: 0 90px;
 }
 
 .loftsix-banner .title {
