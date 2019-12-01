@@ -18,6 +18,11 @@
     width: 100%;
 }
 
+.loftsix-banner .title span {
+    font-family: 'Theory';
+    font-size: 100px;
+}
+
 .loftsix-banner .container {
     display: flex;
 }
