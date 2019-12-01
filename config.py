@@ -1,5 +1,6 @@
 import os
 
+ASSETS_FOLDER = 'assets'
 
 if bool(os.getenv('PROD', True)):
     DATABASE_URL = os.getenv(
