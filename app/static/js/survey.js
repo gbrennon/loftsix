@@ -20,6 +20,8 @@
 
     const answerQuestion = (event) => {
         event.preventDefault();
+
+        cleanTypewriterClass();
         const input = document.getElementById('chat-input');
         const answer = input.value;
 
@@ -29,12 +31,16 @@
         currentQuestionIdx++;
         renderQuestion(questions[currentQuestionIdx]);
 
-        if(answers.length == questions.length) {
+        if(answers.length === questions.length) {
             return true;
         }
 
         return false;
     }
+
+    const cleanTypewriterClass = () => {
+        document.querySelector('.typewriter').classList.remove('typewriter');
+    };
 
     const setupSurvey = (_questions) => {
         questions = _questions;
