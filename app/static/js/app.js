@@ -1,4 +1,4 @@
-(function() {
+(function () {
     const questions = [
         'Como podemos te chamar?',
         'Quanto é 1+1?',
@@ -38,5 +38,7 @@
     }
 
     const answerForm = document.getElementById('answer-form');
-    answerForm.addEventListener('submit', answerQuestion);
+    if (null != answerForm && undefined != answerForm) {
+        answerForm.addEventListener('submit', answerQuestion);
+    }
 })();
