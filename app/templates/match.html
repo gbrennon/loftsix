@@ -4,8 +4,8 @@
 {% for p in properties %}
 <p>{{ p.tower_name }}</p>
 {% endfor %}
-<div style="height: 100%;" id="map">aqui</div>
-{% endblock %}
-<script type="text/javascript" src="{{ static_url_for('static', filename='js/match.js') }}"></script>
+<div style="height: 100%;" id="map"></div>
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP9wjp3IzpVwrM0bpSFUvz6hOq7k5QjZU&callback=initMap"></script>
+<script type="text/javascript" src="{{ static_url_for('static', filename='js/match.js') }}"></script>
+{% endblock %}

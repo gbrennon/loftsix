@@ -1,5 +1,4 @@
 function initMap() {
-	console.log('aaaa')
 	var mapOptions = {
 		zoom: 8,
 		center: new google.maps.LatLng(37.5, -122),
@@ -13,5 +12,4 @@ function initMap() {
 		map: map,
 		title: 'Golden Gate Bridge'
 	});
-
 }
